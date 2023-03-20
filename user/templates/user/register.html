@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row mb-4">
+      <div class="col-md-4">
+          <form action="{% url 'register' %}"  method="post" >
+              {% csrf_token %}
+              <div class="mb-3"  >
+                <label for="exampleInputEmail1" class="form-label">Nom </label>
+                <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your nom with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Prenom</label>
+                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your prenom with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your username with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email"  name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mot de pass</label>
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Age</label>
+                <input type="number" name="age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Numero</label>
+                <input type="number" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Address</label>
+                <input type="text" name="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Photo</label>
+                <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Date de naissance</label>
+                <input type="date" name="date_of_birth" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Lieu de naissance</label>
+                <input type="text" name="place_of_birth" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Sexe</label>
+                <input type="text" name="sexe" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit"  onclick="alert('inscription reussit')" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+      {% comment %} <div class="col-md-6">
+        <img class="rounded mx-auto d-block" src="https://www.radiofrance.fr/s3/cruiser-production/2022/02/1b5f469a-e5f4-4159-a0ca-cf1a9371ef09/560x315_roses-bouquet-fleurs.jpg" alt="" sizes="" srcset="">
+      </div> {% endcomment %}
+  </div>
+</div>
+
+{% endblock %}
